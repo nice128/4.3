@@ -27,9 +27,9 @@ if command -v danted &> /dev/null; then
     echo -e "${CYAN}Do you want to (1) Reconfigure, (2) Add a new user, (3) Uninstall, or (4) Exit? (Enter 1, 2, 3, or 4):${NC}"
     read choice
     if [[ "$choice" == "1" ]]; then
-        echo -e "${CYAN}Reconfiguring requires a port. Please enter the port for the SOCKS5 proxy (default: 1080):${NC}"
+        echo -e "${CYAN}Reconfiguring requires a port. Please enter the port for the SOCKS5 proxy (default: 1081):${NC}"
         read port
-        port=${port:-1080}
+        port=${port:-1081}
         if ! [[ "$port" =~ ^[0-9]+$ ]] || (( port < 1 || port > 65535 )); then
             echo -e "${RED}Invalid port. Please enter a number between 1 and 65535.${NC}"
             exit 1
@@ -54,10 +54,10 @@ if command -v danted &> /dev/null; then
     fi
 else
     echo -e "${YELLOW}Dante SOCKS5 server is not installed on this system.${NC}"
-    echo -e "${CYAN}Note: Port 1080 is commonly used for SOCKS5 proxies. However, it may be blocked by your ISP or server provider. If this happens, choose an alternate port.${NC}"
-    echo -e "${CYAN}Please enter the port for the SOCKS5 proxy (default: 1080):${NC}"
+    echo -e "${CYAN}Note: Port 1081 is commonly used for SOCKS5 proxies. However, it may be blocked by your ISP or server provider. If this happens, choose an alternate port.${NC}"
+    echo -e "${CYAN}Please enter the port for the SOCKS5 proxy (default: 1081):${NC}"
     read port
-    port=${port:-1080}
+    port=${port:-1081}
     if ! [[ "$port" =~ ^[0-9]+$ ]] || (( port < 1 || port > 65535 )); then
         echo -e "${RED}Invalid port. Please enter a number between 1 and 65535.${NC}"
         exit 1
