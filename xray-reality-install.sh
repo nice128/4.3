@@ -262,7 +262,7 @@ echo -n "$VLESS_LINK" | qrencode -t ANSI
 check_status "QR code displayed successfully" "Failed to generate QR code."
 
 # Save QR code to file as well for reference
-QRCODE_FILE="/root/xray_vless_qrcode.png"
+QRCODE_FILE="/home/xray_vless_qrcode.png"
 echo -n "$VLESS_LINK" | qrencode -s 10 -o "$QRCODE_FILE"
 log "QR code also saved to $QRCODE_FILE"
 
