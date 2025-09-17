@@ -85,7 +85,7 @@ if [ -z "$UUID" ]; then
     exit 1
 fi
 
-log "private key111:"$PRIVATE_KEY 
+log "UUID key111:"$UUID 
 echo "private key222:"$PRIVATE_KEY 
 
 if [ -z "$PRIVATE_KEY" ]; then
