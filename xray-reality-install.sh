@@ -85,8 +85,8 @@ if [ -z "$UUID" ]; then
     exit 1
 fi
 
-log "UUID key111:"$UUID 
-echo "private key222:"$PRIVATE_KEY 
+log "UUID key111:" $UUID 
+log "private key222:" $PRIVATE_KEY 
 
 if [ -z "$PRIVATE_KEY" ]; then
     error "Failed to extract private key."
