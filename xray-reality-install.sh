@@ -79,14 +79,14 @@ PUBLIC_KEY=$(sed -n 's/^Public key: //p' /tmp/key)
 log "Raw key output:"
 cat /tmp/key
 
+echo  "UUID key111:" $UUID 
+echo  "private key222:" $PRIVATE_KEY 
+
 # Check if UUID and keys are empty
 if [ -z "$UUID" ]; then
     error "Failed to extract UUID."
     exit 1
 fi
-
-log "UUID key111:" $UUID 
-log "private key222:" $PRIVATE_KEY 
 
 if [ -z "$PRIVATE_KEY" ]; then
     error "Failed to extract private key."
